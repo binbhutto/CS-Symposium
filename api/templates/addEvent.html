@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+{% block content %}
+<section class="text-gray-500 body-font relative main-section">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-row justify-center w-full mb-12">
+          <img src="../static/assets/cs sym logo.png" style="width: 250px;object-fit: contain;">
+        </div>
+        <form method='POST' action="/api/event" enctype="multipart/form-data">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              <ul class="flashes">
+              {% for category, message in messages %}
+                <li class='{% if category == "success" %} w-1/2 mx-auto mb-4 p-2 border-2 border-green-900 rounded text-green-900 bg-green-400 font-bold opacity-50
+                {% else %}
+                  w-1/2 mx-auto mb-4 p-2 border-2 border-red-900 rounded text-red-900 bg-red-400 font-bold opacity-50
+                {% endif %}
+                
+                '>{{ message }}</li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+          {% endwith %}
+            <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                <div class="flex flex-wrap -m-2">
+                  <div class="p-2 w-1/2">
+                    <div class="relative">
+                      <input type="text" 
+                      id="event-number" name="event-number"
+                      placeholder="Event Number" 
+                      class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-1/2">
+                    <div class="relative">
+                      <input type="text" 
+                      id="speaker" name="speaker" 
+                      placeholder="Speaker"
+                      class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <input type="text" 
+                      id="event-topic" name="event-topic" 
+                      placeholder="Event Topic"
+                      class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <input id="linkedin" 
+                      name="linkedin" 
+                      placeholder="Linkedin Link"
+                      class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <textarea id="about-speaker" name="about-speaker" 
+                      placeholder="About Speaker"
+                      class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    </div>
+                  </div>
+                  <div class="p-2 w-full">
+                    <div class="w-1/2 text-lg">
+                      Speaker Avatar: 
+                    </div>
+                    <div class="relative">
+                      <input id="avatar" 
+                      type="file"
+                      name="avatar" 
+                      accept="image/png, image/jpeg, image/jpg">
+                    </div>
+                  </div>
+                  <div class="p-2 w-full">
+                    <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" style="background-color: #008dc1d1;">Submit</button>
+                  </div>
+                </div>
+              </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
