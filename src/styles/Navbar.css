@@ -1,0 +1,27 @@
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.nav_leftLogo {
+    width: 11rem;
+    margin: 3.8rem 0 0 4.5rem;
+    object-fit: contain;
+}
+.topLeftGraphic {
+    width: 30rem;
+    position: absolute;
+}
+.navbar_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 34rem;
+    font-size: 1.5rem;
+    margin: 1.5rem 8rem 0 0;
+}
+.nav_rightLogo {
+    height: 3rem;
+    object-fit: contain;
+}

@@ -1,0 +1,12 @@
+.landing_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.landing_logo {
+    margin-top: 14rem;
+    width: 42rem;
+}
+ 
