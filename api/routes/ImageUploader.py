@@ -8,7 +8,6 @@ def ImageUploader(avatar):
         encoded_string = base64.b64encode(image_file.read())
 
     url = "https://api.imgur.com/3/image"
-    # clientId = "546c25a59c58ad7"
     payload = {'image': encoded_string}
     files = [
 
