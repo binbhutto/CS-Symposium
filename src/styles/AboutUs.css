@@ -1,0 +1,34 @@
+.aboutUs_container {
+    position: absolute;
+    top: 113rem;
+    display: flex;
+    width: 80%;
+    height: 20rem;
+    justify-content: space-between;
+}
+.aboutUs_inner {
+    width: 60%;
+    margin-left: 10rem;
+}
+.aboutUs_inner h1 {
+    font-size: 6rem;
+    font-weight: 100;
+}
+.aboutUs_inner p {
+    margin-top: 2rem;
+    font-size: 1.9rem;
+    font-weight: 100;
+}
+.aboutUs_button_container {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+.aboutUs_button {
+    width: 30rem;
+    height: 5rem;
+    font-size: 1.8rem;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
