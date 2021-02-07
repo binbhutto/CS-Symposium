@@ -10,11 +10,10 @@
             {% if messages %}
               <ul class="flashes">
               {% for category, message in messages %}
-                <li class='{% if category == "success" %} w-1/2 mx-auto mb-4 p-2 border-2 border-green-900 rounded text-green-900 bg-green-400 font-bold opacity-50
+                <li class='{% if category == "success" %} w-full mx-auto mb-4 p-2 border-2 border-green-900 rounded text-green-900 bg-green-400 font-bold opacity-50
                 {% else %}
-                  w-1/2 mx-auto mb-4 p-2 border-2 border-red-900 rounded text-red-900 bg-red-400 font-bold opacity-50
+                  w-full mx-auto mb-4 p-2 border-2 border-red-900 rounded text-red-900 bg-red-400 font-bold opacity-50
                 {% endif %}
-                
                 '>{{ message }}</li>
               {% endfor %}
               </ul>
@@ -113,26 +112,27 @@
 </section>
 <!--EVENT LIST SECTION-->
 <section class="text-gray-500 body-font overflow-hidden" style="background-color: #000;">
-  <div class="container px-5 py-24 mx-auto">
+  <div class="container px-12 py-24 mx-auto">
       <div class="w-full mx-auto mb-20 text-4xl text-center">
           Event List
       </div>
       <div class="-my-8">
           {% for event in events %}
-          <div class="py-8 flex flex-wrap md:flex-nowrap border-b-2 border-gray-700">
+          <div class="px-4 py-8 flex flex-wrap md:flex-nowrap border-b-2 border-gray-700 transition duration-200 ease-in-out hover:bg-gray-700">
             <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-              <span class="font-semibold title-font text-white">{{event.event_topic}}</span>
-              <span class="mt-1 text-gray-500 text-sm" id="eventNum">#{{event.event_number}}</span>
+              <span class="font-semibold title-font text-white">#{{event.event_number}} {{event.speaker}}</span>
+              <span class="mt-1 text-gray-500 text-sm" id="eventNum">Event Date: {{event.event_date}}</span>
+              <span class="mt-1 text-gray-500 text-sm" id="eventNum">Event Time: {{event.event_time}}</span>
             </div>
             <div class="md:flex-grow">
-              <h2 class="text-2xl font-medium text-white title-font mb-2">{{event.speaker}}</h2>
+              <h2 class="text-2xl font-medium text-white title-font mb-2">{{event.event_topic}}</h2>
               <p class="leading-relaxed">{{event.about_speaker}}</p>
             </div>
             <div class="px-10">
               <div class="form-check form-switch">
                 <a href="{{ url_for('data.set_latest',event_number=event.event_number) }}">
-                  <button class="{% if event.latest == true %} btn btn-success 
-                  {% else %} btn btn-secondary {% endif %}" 
+                  <button class="text-xl text-white px-4 py-1 rounded {% if event.latest == true %}bg-green-700 
+                  {% else %}bg-gray-800{% endif %}" 
                   >Latest</button>
                 </a>
               </div>

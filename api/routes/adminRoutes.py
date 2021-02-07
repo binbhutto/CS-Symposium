@@ -43,6 +43,8 @@ def create_blueprint(cluster):
                 event_details = {
                     "event_number" : event["event_number"],
                     "event_topic" : event["event_topic"],
+                    "event_date" : event["event_date"],
+                    "event_time" : event["event_time"],
                     "speaker" : event["speaker"],
                     "linkedin" : event["linkedin"],
                     "about_speaker" : event["about_speaker"],

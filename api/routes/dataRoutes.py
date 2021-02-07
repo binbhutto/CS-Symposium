@@ -4,6 +4,7 @@ from api import config
 from passlib.hash import pbkdf2_sha256
 from werkzeug.utils import secure_filename
 from .ImageUploader import ImageUploader
+from .ListSorter import GetMyKey
 import uuid
 import jwt
 import datetime
@@ -11,24 +12,49 @@ import requests
 def construct_blueprint(cluster):
     data = Blueprint("data",__name__,url_prefix="/api")
 
-    @data.route("/team",methods=["GET"])    #RETURNS ALL TEAM MEMBERS
-    def get_team_all():
-        response = cluster.db.team_members.find()
+    @data.route("/nextevent",methods=["GET"])    #RETURNS NEXT EVENT
+    def get_next_event():
+        response = cluster.db.events.find({"latest" : True})
         output = []
         if response:
-            for member in response:
-                member_data = {
-                    "name" : member["name"],
-                    "rank" : member["rank"],
-                    "dept" : member["dept"],
-                    "rollno" : member["rollno"],
-                    "email" : member["email"],
-                    "about" : member["about"],
-                    "github" : member["github"],
-                    "linkedin" : member["linkedin"],
-                    "avatar" : member["avatar"]
+            for event in response:
+                event_data = {
+                    "event_number" : event["event_number"],
+                    "event_topic" : event["event_topic"],
+                    "event_rg_date" : event["event_rg_date"],
+                    "event_date" : event["event_date"],
+                    "event_time" : event["event_time"],
+                    "speaker" : event["speaker"],
+                    "linkedin" : event["linkedin"],
+                    "about_speaker" : event["about_speaker"],
+                    "speaker_exp" : event["speaker_exp"],
+                    "avatar" : event["avatar"],
                 }
-                output.append(member_data)
+                output.append(event_data)
+            output.sort(key=GetMyKey)
+            return jsonify({"status" : 200,"result": output})
+        return jsonify({"status" : 404,"result": "no data"})
+    
+    @data.route("/pastevent",methods=["GET"])    #RETURNS PAST EVENTS
+    def get_past_event():
+        response = cluster.db.events.find({"latest" : False})
+        output = []
+        if response:
+            for event in response:
+                event_data = {
+                    "event_number" : event["event_number"],
+                    "event_topic" : event["event_topic"],
+                    "event_rg_date" : event["event_rg_date"],
+                    "event_date" : event["event_date"],
+                    "event_time" : event["event_time"],
+                    "speaker" : event["speaker"],
+                    "linkedin" : event["linkedin"],
+                    "about_speaker" : event["about_speaker"],
+                    "speaker_exp" : event["speaker_exp"],
+                    "avatar" : event["avatar"],
+                }
+                output.append(event_data)
+            output.sort(key=GetMyKey, reverse=True)
             return jsonify({"status" : 200,"result": output})
         return jsonify({"status" : 404,"result": "no data"})
 
@@ -57,8 +83,8 @@ def construct_blueprint(cluster):
         speaker = request.form.get("speaker")
         event_topic = request.form.get("event-topic")
         event_rg_date = request.form.get("event_rg_date")
-        event_date = request.form.get("event-date")
-        event_time = request.form.get("event-time")
+        event_date = request.form.get("event_date")
+        event_time = request.form.get("event_time")
         linkedin = request.form.get("linkedin")
         about_speaker = request.form.get("about-speaker")
         speaker_exp = request.form.get("speaker_exp")
