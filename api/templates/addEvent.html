@@ -32,6 +32,30 @@
                   </div>
                   <div class="p-2 w-1/2">
                     <div class="relative">
+                      <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                      id="event_rg_dater" name="event_rg_date" 
+                      placeholder="Last Date For Registration"
+                      class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-1/2">
+                    <div class="relative">
+                      <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                      id="event_date" name="event_date" 
+                      placeholder="Event Date"
+                      class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-1/2">
+                    <div class="relative">
+                      <input type="text" onfocus="(this.type='time')" onblur="(this.type='text')" 
+                      id="event_time" name="event_time" 
+                      placeholder="Event Time"
+                      class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-full">
+                    <div class="relative">
                       <input type="text" 
                       id="speaker" name="speaker" 
                       placeholder="Speaker"
@@ -62,6 +86,13 @@
                     </div>
                   </div>
                   <div class="p-2 w-full">
+                    <div class="relative">
+                      <textarea id="speaker_exp" name="speaker_exp" 
+                      placeholder="Speaker Experience"
+                      class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    </div>
+                  </div>
+                  <div class="p-2 w-full">
                     <div class="w-1/2 text-lg">
                       Speaker Avatar: 
                     </div>
@@ -80,4 +111,36 @@
         </form>
     </div>
 </section>
+<!--EVENT LIST SECTION-->
+<section class="text-gray-500 body-font overflow-hidden" style="background-color: #000;">
+  <div class="container px-5 py-24 mx-auto">
+      <div class="w-full mx-auto mb-20 text-4xl text-center">
+          Event List
+      </div>
+      <div class="-my-8">
+          {% for event in events %}
+          <div class="py-8 flex flex-wrap md:flex-nowrap border-b-2 border-gray-700">
+            <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+              <span class="font-semibold title-font text-white">{{event.event_topic}}</span>
+              <span class="mt-1 text-gray-500 text-sm" id="eventNum">#{{event.event_number}}</span>
+            </div>
+            <div class="md:flex-grow">
+              <h2 class="text-2xl font-medium text-white title-font mb-2">{{event.speaker}}</h2>
+              <p class="leading-relaxed">{{event.about_speaker}}</p>
+            </div>
+            <div class="px-10">
+              <div class="form-check form-switch">
+                <a href="{{ url_for('data.set_latest',event_number=event.event_number) }}">
+                  <button class="{% if event.latest == true %} btn btn-success 
+                  {% else %} btn btn-secondary {% endif %}" 
+                  >Latest</button>
+                </a>
+              </div>
+          </div>
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!--EVENT LIST SECTION END-->
 {% endblock %}

@@ -30,14 +30,28 @@ def create_blueprint(cluster):
                 if(pbkdf2_sha256.verify(password,response["password"])):
                     jwt_encoded = jwt.encode({"username" : response["username"], "exp" : datetime.datetime.utcnow()+datetime.timedelta(days=1)},environ.get("SECRET_KEY"))
                     session["token"] = jwt_encoded
-                    print("True")
                     return redirect(url_for('admin.event_page'))
         return render_template('adminLogin.html')
 
     @admin.route("/event",methods=['GET'])
     @isLoggedIn
     def event_page():
-        return render_template('addEvent.html')
+        response = cluster.db.events.find()
+        output = []
+        if response:
+            for event in response:
+                event_details = {
+                    "event_number" : event["event_number"],
+                    "event_topic" : event["event_topic"],
+                    "speaker" : event["speaker"],
+                    "linkedin" : event["linkedin"],
+                    "about_speaker" : event["about_speaker"],
+                    "avatar" : event["avatar"],
+                    "latest" : event["latest"]
+                }
+                output.append(event_details)
+            return render_template('addEvent.html',events=output)
+        return render_template('<h1>SERVER ERROR</h1>')
 
 
     @admin.route("/",methods=['GET','POST'])         #VIEW ADMINS
