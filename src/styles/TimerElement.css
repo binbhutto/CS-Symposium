@@ -1,0 +1,24 @@
+.timer-element{
+    width: 15rem;
+    padding: 1rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.number-part{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 2rem 2rem;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #1b1b1b, #171717);
+    box-shadow:  5px 5px 12px #0a0a0a,
+                -5px -5px 12px #303030;
+}
+.string-part{
+    font-size: 1.8rem;
+}

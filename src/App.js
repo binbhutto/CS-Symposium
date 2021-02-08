@@ -3,7 +3,7 @@ import AboutUs from './components/AboutUs';
 import Landing from './components/Landing';
 import Navbar from './components/Navbar';
 import Objectives from './components/Objectives';
-
+import NextEvent from './sections/NextEvent';
 function App() {
   return (
     <div className="app">
@@ -11,6 +11,7 @@ function App() {
       <Landing />
       <AboutUs />
       <Objectives />
+      <NextEvent />
     </div>
   );
 }

@@ -1,17 +1,21 @@
+.banner_container{
+    overflow-y: hidden;
+    margin: 7rem 0;
+    height: 9rem;
+}
 .thickStrip {
-    margin: 9rem 0;
     height: 9rem;
     width: 100%;
 }
 .banner_heading {
     background-color: #191919;
     width: 50rem;
-    height: 10rem;
+    height: 9rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -19rem;
+    top: -9.3rem;
     left: 6rem
 }
 .banner_heading h1 {

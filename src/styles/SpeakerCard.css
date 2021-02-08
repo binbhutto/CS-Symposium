@@ -1,0 +1,103 @@
+.card{
+    width: 100%;
+    margin-left: 5%;
+    padding: 50px 0px 50px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.card-left{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-right{
+    width: 60%;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.avatar-bg{
+    width: 400px;
+    min-height: 350px;
+    background-image: url('../graphics/stripeSquare.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.avatar{
+    width: 300px;
+    object-fit: cover;
+    border: 8px solid #191919;
+    border-radius: 50%;
+}
+.speaker-details{
+    width: 300px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.speaker-name{
+    font-size: 18px;
+    font-weight: 100;
+    margin-right: 25px;
+}
+.speaker-linkedin-wrapper{
+    text-decoration: none;
+}
+.speaker-linkedin{
+    width: 30px;
+    padding-top: 5px;
+    object-fit: contain;
+}
+.event-details{
+    width: 90%;
+    margin: 25px auto;
+}
+.event-details-inner{
+    width: 90%;
+    display: flex;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 100;
+}
+.event-details-p1{
+    width: 45%;
+    text-align: right;
+}
+.event-details-p2{
+    width: 50%;
+    text-align: right;
+}
+#ld{
+    align-self: flex-end;
+}
+.about-speaker{
+    align-self: flex-start;
+}
+.about-content{
+    font-size: 1.8rem;
+    padding-right: 100px;
+    min-height: 12rem;
+}
+.timer{
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.timer-header{
+    font-size: 1.8rem;
+}
+.timer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+}
 .app {
   background-color: #191919;
   min-width: 100vw;
