@@ -6,6 +6,12 @@
     height: 20rem;
     justify-content: space-between;
 }
+.aboutUs_inner::-webkit-scrollbar{
+    display: none;
+}
+.aboutUs_inner::-moz-scrollbar{
+    display: none;
+}
 .aboutUs_inner {
     width: 60%;
     margin-left: 10rem;

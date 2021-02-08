@@ -1,6 +1,5 @@
 import './App.css';
 import AboutUs from './components/AboutUs';
-import EventBanner from './components/EventBanner';
 import Landing from './components/Landing';
 import Navbar from './components/Navbar';
 import Objectives from './components/Objectives';
@@ -12,7 +11,6 @@ function App() {
       <Landing />
       <AboutUs />
       <Objectives />
-      <EventBanner title={'NEXT EVENT'} />
     </div>
   );
 }
