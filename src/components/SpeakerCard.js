@@ -28,7 +28,7 @@ function SpeakerCard(){
     return(
         <React.Fragment>
             {console.log(nextEvent)}
-            {nextEvent.map((event) => (
+            {nextEvent.map((event) => 
                 <div className="card" key={event.event_number}>
                     <div className="card-left">
                         <div className="avatar-bg">
@@ -79,7 +79,7 @@ function SpeakerCard(){
                         </div>
                     </div>
                 </div>
-            ))}
+            )}
         </React.Fragment>
     );
 }

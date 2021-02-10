@@ -1,0 +1,22 @@
+.carousel-wrapper{
+    width: 80%;
+    margin-left: 20%;
+}
+.carousel-up-btn, .carousel-down-btn{
+    width: 40%;
+    margin: auto;
+}
+.p-event-btn-top{
+    width: 60px;
+    object-fit: contain;
+    transform: rotateX(180deg);
+}
+.p-event-btn-bottom{
+    width: 60px;
+    object-fit: contain;
+}
+.carousel{
+    margin: 3rem 0;
+    height: 750px;
+    overflow-y: scroll;
+}

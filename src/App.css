@@ -4,6 +4,12 @@
   font-weight: lighter;
   font-style: normal;
 }
+*::-webkit-scrollbar{
+  display: none;
+}
+*::-moz-scrollbar{
+  display: none;
+}
 .app {
   background-color: #191919;
   min-width: 100vw;

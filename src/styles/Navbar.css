@@ -25,3 +25,10 @@
     height: 3rem;
     object-fit: contain;
 }
+a{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}

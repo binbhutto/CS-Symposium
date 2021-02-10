@@ -1,7 +1,7 @@
 .banner_container{
     overflow-y: hidden;
     margin: 7rem 0;
-    height: 9rem;
+    height: 10rem;
 }
 .thickStrip {
     height: 9rem;
@@ -15,8 +15,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -9.3rem;
-    left: 6rem
+    top: -9rem;
+    left: 6rem;
+    overflow-y: hidden;
 }
 .banner_heading h1 {
     font-size: 6.6rem;

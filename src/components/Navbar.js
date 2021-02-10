@@ -13,8 +13,8 @@ function Navbar() {
             </div>
             <div className='navbar_right'>
                 <p>HOME</p>
-                <p>CONTACT</p>
-                <p>ABOUT</p>
+                <a href="#contactus" className="navbar-links"><p>CONTACT</p></a>
+                <a href="#aboutus" className="navbar-links"><p>ABOUT</p></a>
                 <img className='nav_rightLogo' src={rightLogo}></img>
             </div>
         </div>
