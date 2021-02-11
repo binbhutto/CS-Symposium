@@ -57,3 +57,15 @@
     width: 100%;
     padding: 2rem;
 }
+@media screen and (max-width: 440px){
+    .contact-form-inner{
+        width: 100%;
+        flex-direction: column;
+    }
+    .contact-form-wrapper{
+        width: 100%;
+    }
+    .other-wrapper{
+        width: 100%;
+    }
+}

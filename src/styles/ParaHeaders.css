@@ -1,24 +1,24 @@
 .para-header-container{
     width: inherit;
     margin-top: 1rem;
-}
-.thinStrip {
-    margin:0;
-    height: 3rem;
-    width: 100%;
+    background: url('../graphics/stripe\ thin.png');
+    background-size: cover;
 }
 .para_heading {
     background-color: #191919;
     width: 20rem;
-    height: 3rem;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: -3.1rem;
-    left: 40%;
 }
 .para_heading h1 {
+    margin: auto;
     font-size: 2.5rem;
     font-weight: 100;
+}
+@media screen and (max-width: 440px){
+    .para-header-container{
+        margin: 3rem 0rem 2rem 0rem;
+    }
 }

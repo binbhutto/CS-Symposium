@@ -20,3 +20,18 @@
     height: 750px;
     overflow-y: scroll;
 }
+@media screen and (max-width: 440px){
+    .carousel-wrapper{
+        width: 85%;
+        margin: auto;
+    }
+    .carousel{
+        height: 550px;
+    }
+    .carousel-up-btn, .carousel-down-btn{
+        text-align: center;
+    }
+    .p-event-btn-top, .p-event-btn-bottom{
+        width: 40px;
+    }
+}

@@ -6,7 +6,6 @@ function ParaHeader({title}) {
     return (
         <React.Fragment>
             <div className='para-header-container'>
-                <img className='thinStrip' src={thinStrip} /> 
                 <div className='para_heading'>
                     <h1>{title}</h1>
                 </div>

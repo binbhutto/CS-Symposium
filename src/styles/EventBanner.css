@@ -1,25 +1,36 @@
 .banner_container{
     overflow-y: hidden;
     margin: 7rem 0;
-    height: 10rem;
-}
-.thickStrip {
-    height: 9rem;
-    width: 100%;
+    background: url('../graphics/thick\ stripes\ full\ length.png');
+    background-size: cover;
 }
 .banner_heading {
-    background-color: #191919;
     width: 50rem;
-    height: 9rem;
+    margin-left: 6rem;
+    background-color: #191919;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: -9rem;
-    left: 6rem;
     overflow-y: hidden;
 }
 .banner_heading h1 {
     font-size: 6.6rem;
     font-weight: 100;
+}
+@media screen and (max-width: 440px){
+    .banner_container{
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center;
+    }
+    .banner_heading {
+        width: 70%;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner_heading h1 {
+        font-size: 3rem;
+    }
 }

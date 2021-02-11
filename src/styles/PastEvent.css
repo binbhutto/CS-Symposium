@@ -17,3 +17,11 @@
     width: 300px;
     object-fit: contain;
 }
+@media screen and (max-width: 440px){
+    .p-left{
+        width: 100%;
+    }
+    .p-right{
+        display: none;
+    }
+}

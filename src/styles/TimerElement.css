@@ -22,3 +22,18 @@
 .string-part{
     font-size: 1.8rem;
 }
+@media screen and (max-width: 440px){
+    .timer-element{
+        width: 8rem;
+    }
+    .number-part{
+        width: 100%;
+        padding: 1.5rem 1.4rem;
+        font-size: 2rem;
+        box-shadow:  5px 5px 12px #0a0a0a,
+                    -5px -5px 12px #252525;
+    }
+    .string-part{
+        font-size: 1.4rem;
+    }
+}

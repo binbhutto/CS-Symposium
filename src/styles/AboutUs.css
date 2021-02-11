@@ -1,27 +1,21 @@
 .aboutUs_container {
-    position: absolute;
-    top: 113rem;
+    width: 90%;
+    margin-bottom: 2rem;
+    padding-right: 20px;
     display: flex;
-    width: 80%;
     justify-content: space-between;
-}
-.aboutUs_inner::-webkit-scrollbar{
-    display: none;
-}
-.aboutUs_inner::-moz-scrollbar{
-    display: none;
 }
 .aboutUs_inner {
     width: 60%;
     margin-left: 10rem;
 }
-.aboutUs_inner h1 {
+.aboutus-header{
     font-size: 6rem;
     font-weight: 100;
 }
-.aboutUs_inner p {
+.aboutus-content{
     margin-top: 2rem;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-weight: 100;
 }
 .aboutUs_button_container {
@@ -30,10 +24,43 @@
     margin-bottom: 2rem;
 }
 .aboutUs_button {
-    width: 30rem;
+    width: 25rem;
     height: 5rem;
     font-size: 1.8rem;
     color: white;
     background-color: transparent;
     border: 1px solid white;
+}
+@media screen and (min-width: 1440px){
+    .aboutUs_container{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 440px){
+    .aboutUs_container{
+        flex-direction: column;
+        padding: 0px;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+    .aboutUs_inner {
+        width: 100%;
+        margin-left: 0px;
+        text-align: center;
+    }
+    .aboutus-header{
+        font-size: 3.5rem;
+    }
+    .aboutus-content{
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+    .aboutUs_button_container {
+        align-items: center;
+        justify-content: center;
+    }
+    .aboutUs_button {
+        width: 22rem;
+        font-size: 1.6rem;
+    }
 }

@@ -28,3 +28,10 @@
     color: #acacac;
     text-align: center;
 }
+@media screen and (max-width: 440px){
+    .member-wrapper{
+        width: 300px;
+        height: 220px;
+        margin: 10px 20px;
+    }
+}

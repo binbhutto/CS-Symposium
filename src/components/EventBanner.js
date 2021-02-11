@@ -7,7 +7,6 @@ function EventBanner({title}) {
     return (
         <React.Fragment>
             <div className='banner_container'>
-                <img className='thickStrip' src={thickStrip} /> 
                 <div className='banner_heading'>
                     <h1>{title}</h1>
                 </div>

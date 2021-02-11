@@ -24,10 +24,7 @@
     align-items: center;
     justify-content: space-around;
 }
-.social-links{
-    width: 30px;
-    object-fit: contain;
-}
+
 .copyright-wrapper{
     width: 90%;
     margin: auto;
@@ -38,4 +35,30 @@
     margin: auto;
     text-align: center;
     font-size: 1.8rem;
+}
+@media screen and (max-width: 440px){
+    .footer-wrapper{
+        padding-bottom: 50px;
+    }
+    .social-wrapper{
+        flex-direction: column;
+    }
+    .social-side-header{
+        width: 100%;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        font-weight: lighter;
+    }
+    .social-links-wrapper{
+        width:100%;
+    }
+    .social-links{
+        width: 40px;
+    }
+    .copywrite-inner{
+        width:80%;
+        margin: auto;
+        text-align: center;
+        font-size: 1.2rem;
+    }
 }

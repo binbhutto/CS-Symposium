@@ -3,18 +3,23 @@
     margin-left: 5%;
     padding: 50px 0px 50px 0px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
-.card-left{
-    width: 30%;
+.card-p-1{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-.card-right{
+.card-p-2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.speaker-abexp-wrapper{
     width: 60%;
-    margin-left: 2rem;
     display: flex;
     flex-direction: column;
 }
@@ -37,14 +42,16 @@
 }
 .speaker-details{
     width: 300px;
+    margin: auto;
     padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .speaker-name{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 100;
+    margin: 0;
     margin-right: 25px;
 }
 .speaker-linkedin-wrapper{
@@ -56,7 +63,7 @@
     object-fit: contain;
 }
 .event-details{
-    width: 90%;
+    width: 40%;
     margin: 25px auto;
 }
 .event-details-inner{
@@ -100,4 +107,57 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+@media screen and (max-width: 440px){
+    .card{
+        margin: 0;
+    }
+    .card-p-1{
+        flex-direction: column;
+    }
+    .card-p-2{
+        width: 100%;
+        flex-direction: column;
+    }
+    .speaker-profile-wrapper{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .avatar-bg{
+        aspect-ratio: 1.01/0.75;
+        min-height: 0;
+    }
+    .avatar{
+        width: 60%;
+    }
+    .speaker-details{
+        width: 100%;
+    }
+    .speaker-abexp-wrapper{
+        width: 100%;
+    }
+    .about-content{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding: 0px;
+        font-size: 1.6rem;
+        min-height: 12rem;
+    }
+    .event-details{
+        width: 90%;
+        margin: 4rem auto;
+    }
+    .timer-content{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 325px){
+    .timer-content{
+        width: 92%;
+    }
 }

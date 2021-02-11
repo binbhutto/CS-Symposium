@@ -1,14 +1,29 @@
 .objectives_container {  
-    margin-top: -25rem;
     width: 55%;
     margin-left: 10rem;
 }
-.objectives_container h1 {
+.objectives-header{
     font-size: 6rem;
     font-weight: 100;
 }
-.objectives_container p {
+.objectives-content{
     font-size: 1.9rem;
     font-weight: 100;
     margin-top: 2rem;
+}
+@media screen and (max-width: 440px){
+    .objectives_container {  
+        width: 90%;
+        margin-left: 0px;
+        margin: auto;
+        text-align: center;
+    }
+    .objectives-header{
+        font-size: 3.5rem;
+    }
+    .objectives-content{
+        font-size: 1.6rem;
+        font-weight: 100;
+        margin-top: 2rem;
+    }
 }

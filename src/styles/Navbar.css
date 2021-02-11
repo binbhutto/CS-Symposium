@@ -32,3 +32,17 @@ a:hover{
     text-decoration: none;
     color: white;
 }
+@media screen and (max-width: 440px){
+    .navbar_right{
+        display: none;
+    }
+    .nav_leftLogo{
+        width: 8rem;
+        margin: 2rem 0 0 2.5rem;
+        object-fit: contain;
+    }
+    .topLeftGraphic {
+        width: 16rem;
+        object-fit: contain;
+    }
+}
