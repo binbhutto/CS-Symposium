@@ -63,9 +63,9 @@ jQuery(document).ready(function($) {
 
         var distance = countDownDate - now;
 
-        $("days")[0].textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
-        $("hrs")[0].textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        $("mins")[0].textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        $("sec")[0].textContent = Math.floor((distance % (1000 * 60)) / 1000);
+        $("#days")[0].textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
+        $("#hrs")[0].textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        $("#mins")[0].textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        $("#sec")[0].textContent = Math.floor((distance % (1000 * 60)) / 1000);
     }, 1000);
 });
