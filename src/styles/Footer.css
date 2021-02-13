@@ -24,7 +24,9 @@
     align-items: center;
     justify-content: space-around;
 }
-
+.social-links{
+    width: 40px;
+}
 .copyright-wrapper{
     width: 90%;
     margin: auto;
