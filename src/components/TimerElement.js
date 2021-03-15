@@ -1,12 +1,12 @@
 import React from 'react';
 import '../styles/TimerElement.css';
-function NextEvent({number,str}){
+function NextEvent({str}){
     return(
         <React.Fragment>
             <div className="timer-element">
-                <div className="number-part">
+                {/* <div className="number-part" id>
                     {number}
-                </div>
+                </div> */}
                 <div className="string-part">
                     {str}
                 </div>

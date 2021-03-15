@@ -2,7 +2,7 @@ import React from 'react';
 import linkedin from '../graphics/linkedin.png';
 import '../styles/SpeakerCard.css';
 import ParaHeader from  './ParaHeaders';
-import TimerElement from './TimerElement';
+import TimerWrapper from './TimerWrapper';
 import {requests} from '../components/requests';
 
 function SpeakerCard(){
@@ -24,7 +24,7 @@ function SpeakerCard(){
         }
         GetNextEvent();
     }, [])
-    
+
     return(
         <React.Fragment>
             {console.log(nextEvent)}
@@ -75,10 +75,7 @@ function SpeakerCard(){
                         <div className="timer">
                             <p className="timer-header">NEXT EVENT COMMING SOON</p>
                             <div className="timer-content">
-                                <TimerElement number={'12'} str={'DAYS'}/>
-                                <TimerElement number={'12'} str={'HOURS'}/>
-                                <TimerElement number={'12'} str={'MIN'}/>
-                                <TimerElement number={'23'} str={'SEC'}/>
+                                <TimerWrapper date={event.event_date} time={event.event_time}/>
                             </div>
                         </div>
                     </div>
