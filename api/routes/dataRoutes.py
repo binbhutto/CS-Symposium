@@ -10,7 +10,7 @@ import jwt
 import datetime
 import requests
 def construct_blueprint(cluster):
-    data = Blueprint("data",__name__,url_prefix="/api")
+    data = Blueprint("data",__name__,url_prefix="/sym/api")
 
     @data.route("/nextevent",methods=["GET"])    #RETURNS NEXT EVENT
     def get_next_event():
