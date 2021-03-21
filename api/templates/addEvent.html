@@ -5,7 +5,7 @@
         <div class="flex flex-row justify-center w-full mb-12">
           <img src="../static/assets/cs sym logo.png" style="width: 250px;object-fit: contain;">
         </div>
-        <form method='POST' action="/api/event" enctype="multipart/form-data">
+        <form method='POST' action="/sym/api/event" enctype="multipart/form-data">
           {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
               <ul class="flashes">
