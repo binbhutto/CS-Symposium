@@ -6,7 +6,7 @@ import datetime
 import uuid
 import jwt
 def create_blueprint(cluster):
-    admin = Blueprint("admin",__name__,url_prefix="/sym/admin")
+    admin = Blueprint("admin",__name__,url_prefix="/admin")
 
     def isLoggedIn(f):                  #LOGIN CHECKER
         @wraps(f)
