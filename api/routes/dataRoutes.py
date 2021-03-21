@@ -26,6 +26,7 @@ def construct_blueprint(cluster):
                     "event_time" : event["event_time"],
                     "speaker" : event["speaker"],
                     "linkedin" : event["linkedin"],
+                    "reg_link" : event["reg_link"],
                     "about_speaker" : event["about_speaker"],
                     "speaker_exp" : event["speaker_exp"],
                     "avatar" : event["avatar"],
@@ -49,6 +50,7 @@ def construct_blueprint(cluster):
                     "event_time" : event["event_time"],
                     "speaker" : event["speaker"],
                     "linkedin" : event["linkedin"],
+                    "reg_link" : event["reg_link"],
                     "about_speaker" : event["about_speaker"],
                     "speaker_exp" : event["speaker_exp"],
                     "avatar" : event["avatar"],
@@ -86,6 +88,7 @@ def construct_blueprint(cluster):
         event_date = request.form.get("event_date")
         event_time = request.form.get("event_time")
         linkedin = request.form.get("linkedin")
+        reg_link = request.form.get("reg_link")
         about_speaker = request.form.get("about-speaker")
         speaker_exp = request.form.get("speaker_exp")
         avatar = request.files["avatar"]
@@ -112,6 +115,7 @@ def construct_blueprint(cluster):
                                 "event_time" : event_time,
                                 "speaker" : speaker,
                                 "linkedin" : linkedin,
+                                "reg_link" : reg_link,
                                 "about_speaker" : about_speaker,
                                 "speaker_exp" : speaker_exp,
                                 "avatar" : avatar,
@@ -134,6 +138,7 @@ def construct_blueprint(cluster):
                         "event_time" : event_time,
                         "speaker" : speaker,
                         "linkedin" : linkedin,
+                        "reg_link" : reg_link,
                         "about_speaker" : about_speaker,
                         "speaker_exp" : speaker_exp,
                         "avatar" : avatar,
