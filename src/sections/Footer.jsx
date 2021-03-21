@@ -12,16 +12,13 @@ function Footer(){
                     OUR SOCIAL MEDIA
                 </div>
                 <div className="social-links-wrapper">
-                    <a href="#">
+                    <a href="https://www.instagram.com/cs_symposium_/">
                         <img className="social-links" src={Instagram} />
                     </a>
-                    <a href="#">
-                        <img className="social-links" src={Facebook} />
-                    </a>
-                    <a href="#">
+                    <a href="https://twitter.com/CsSymposium">
                         <img className="social-links" src={Twitter} />
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/company/cs-symposium">
                         <img className="social-links" src={Linkedin} />
                     </a>
                 </div>

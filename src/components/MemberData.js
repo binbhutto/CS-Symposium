@@ -16,7 +16,7 @@ export const data = [
         image: "https://i.imgur.com/2CoAdUZ.png"
     },
     {
-        name : "Sneha",
+        name : "Sneha Deb Roy",
         image: "https://i.imgur.com/dnn68Ub.png"
     },
     {

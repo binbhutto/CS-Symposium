@@ -10,6 +10,24 @@
 .landing_logo {
     width: 42rem;
 }
+.register_btn{
+    z-index: 9999999;
+}
+.register:link{
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.register:visited{
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.register:active{
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
 .landing_button {
     width: 30rem;
     height: 5rem;
@@ -17,6 +35,7 @@
     color: white;
     background-color: transparent;
     border: 1px solid white;
+    z-index: 99999;
 }
 .langing_graphics {
     display: flex;

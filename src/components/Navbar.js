@@ -12,10 +12,12 @@ function Navbar() {
                 <img className='nav_leftLogo' src={leftLogo}></img>
             </div>
             <div className='navbar_right'>
-                <p>HOME</p>
+                <a href="/" className="navbar-links"><p>HOME</p></a>
                 <a href="#contactus" className="navbar-links"><p>CONTACT</p></a>
                 <a href="#aboutus" className="navbar-links"><p>ABOUT</p></a>
-                <img className='nav_rightLogo' src={rightLogo}></img>
+                <a href="https://www.linkedin.com/company/cs-symposium" className="navbar-links">
+                    <img className='nav_rightLogo' src={rightLogo}></img>
+                </a>
             </div>
         </div>
     )
