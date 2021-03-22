@@ -1,0 +1,14 @@
+.comming-soon-wrapper{
+    width : 100%;
+    text-align: center;
+    padding: 10rem 2rem 10rem 2rem;
+    font-size: 40px;
+    color: hsl(0, 0%, 90%);
+    text-transform: uppercase;
+}
+@media screen and (max-width: 440px){
+    .comming-soon-wrapper{
+        padding: 10rem 3rem 10rem 3rem;
+        font-size: 28px;
+    }
+}

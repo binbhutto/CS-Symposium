@@ -1,6 +1,7 @@
 .para-header-container{
-    width: inherit;
+    width: 100%;
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
     background: url('../graphics/stripe\ thin.png');
     background-size: cover;
 }

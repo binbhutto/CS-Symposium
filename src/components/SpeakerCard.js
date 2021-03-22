@@ -2,6 +2,7 @@ import React from 'react';
 import linkedin from '../graphics/linkedin.png';
 import '../styles/SpeakerCard.css';
 import ParaHeader from  './ParaHeaders';
+import CommingSoon from './CommingSoon';
 import TimerWrapper from './TimerWrapper';
 import {requests} from '../components/requests';
 
@@ -27,7 +28,8 @@ function SpeakerCard(){
 
     return(
         <React.Fragment>
-            {nextEvent.map((event) => 
+            {nextEvent.length === 0? <CommingSoon/> : 
+            nextEvent.map((event) => 
                 <div className="card" key={event.event_number}>
                     <div className="card-p-1">
                         <div className="speaker-profile-wrapper">
@@ -79,7 +81,8 @@ function SpeakerCard(){
                         </div>
                     </div>
                 </div>
-            )}
+            )
+            }
         </React.Fragment>
     );
 }
