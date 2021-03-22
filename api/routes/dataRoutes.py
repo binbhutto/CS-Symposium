@@ -152,8 +152,9 @@ def construct_blueprint(cluster):
             return redirect(url_for('admin.event_page'))
 
 
-    @data.route('/delete/<event_number>',methods=['DELETE'])
-    def delete_event(event_number):
+    @data.route('/delete',methods=['DELETE'])
+    def delete_event():
+        event_number = request.json["event_number"]
         response = cluster.db.events.delete_one({"event_number": event_number})
         if response:
             return jsonify({"status" : 200, "message" : "Event Deleted"})
