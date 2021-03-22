@@ -14,7 +14,7 @@ function App() {
       <Landing />
       <TextSection />
       <NextEvent />
-      <PastEvent />
+      <PastEvent/>
       <Team />
       <ContactUs />
       <Footer />
