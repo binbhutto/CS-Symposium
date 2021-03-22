@@ -151,4 +151,14 @@ def construct_blueprint(cluster):
             flash('Event cannot be added','error')
             return redirect(url_for('admin.event_page'))
 
+
+    @data.route('/delete/<event_number>',methods=['DELETE'])
+    def delete_event(event_number):
+        response = cluster.db.events.delete_one({"event_number": event_number})
+        if response:
+            return jsonify({"status" : 200, "message" : "Event Deleted"})
+        return jsonify({"status" : 404, "message" : "Event Not Found"})
+
+
+
     return data
