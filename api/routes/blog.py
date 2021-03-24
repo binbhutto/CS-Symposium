@@ -49,9 +49,9 @@ def create_blueprint(cluster):
     @blog.route('/add',methods=['POST'])      #ADD BLOG
     def add_blog():
         if request.method == 'POST':
-            event_number = request.form.get("event_number")
-            blog_title = request.form.get("blog_title")
-            blog_content = request.form.get("blog_content")
+            event_number = request.json["event_number"]
+            blog_title = request.json["blog_title"]
+            blog_content = request.json["blog_content"]
 
             response = cluster.db.events.find_one({"event_number" : event_number})
             if response:

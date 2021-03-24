@@ -7,7 +7,7 @@ from .routes import dataRoutes,adminRoutes,blog
 def create_app():
     app = Flask(__name__)
     app.config.from_object(config.Development())
-    CORS(app)
+    CORS(app,origins="*")
     cluster = PyMongo(app)
     app.register_blueprint(dataRoutes.construct_blueprint(cluster))
     app.register_blueprint(adminRoutes.create_blueprint(cluster))
