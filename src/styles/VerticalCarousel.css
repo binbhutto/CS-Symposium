@@ -17,19 +17,25 @@
 }
 .carousel{
     margin: 3rem 0;
-    height: 750px;
+    max-height: 760px;
     overflow-y: scroll;
 }
-@media screen and (max-width: 440px){
-    .carousel-wrapper{
-        width: 85%;
-        margin: auto;
-    }
+/* @media screen and (max-width: 1024px){
     .carousel{
         height: 550px;
     }
+} */
+@media screen and (max-width: 440px){
+    .carousel-wrapper{
+        width: 85%;
+        margin: 4rem auto;
+    }
+    .carousel{
+        max-height: 550px;
+    }
     .carousel-up-btn, .carousel-down-btn{
-        text-align: center;
+        display: flex;
+        justify-content: center;
     }
     .p-event-btn-top, .p-event-btn-bottom{
         width: 40px;

@@ -7,14 +7,35 @@ import PastEvent from '../sections/PastEvent';
 import Team from '../sections/Team';
 import ContactUs from '../sections/ContactUs';
 import Footer from '../sections/Footer';
+import {requests} from '../components/requests';
 
 function HomePage(){
+
+    const[regLink, setRegLink] = React.useState([]);
+    const[nextEvent, setNextEvent] = React.useState([]);
+
+    React.useEffect(() => {
+        function GetNextEventsAndParse(){
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET',`${requests.fetchNextEvents}`,true);
+            xhr.responseType = 'json';
+            xhr.addEventListener('load',() => {
+                if(xhr.response.result.length !== 0){
+                    setRegLink(xhr.response.result[0].reg_link);
+                    setNextEvent(xhr.response.result);
+                }
+            });
+            xhr.send();
+        }
+        GetNextEventsAndParse();
+    },[])
+
     return(
         <>
             <Navbar />
-            <Landing />
+            <Landing regLink = {regLink}/>
             <TextSection />
-            <NextEvent />
+            <NextEvent nextEvent={nextEvent}/>
             <PastEvent/>
             <Team />
             <ContactUs />

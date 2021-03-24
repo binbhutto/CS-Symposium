@@ -2,8 +2,8 @@ import React from 'react';
 import '../styles/Footer.css';
 import Linkedin from '../graphics/linkedin.png';
 import Twitter from '../graphics/twitter.png';
-import Facebook from '../graphics/facebook.png';
 import Instagram from '../graphics/insta.png';
+
 function Footer(){
     return(
         <div className="footer-wrapper">

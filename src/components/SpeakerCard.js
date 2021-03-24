@@ -4,33 +4,33 @@ import '../styles/SpeakerCard.css';
 import ParaHeader from  './ParaHeaders';
 import CommingSoon from './CommingSoon';
 import TimerWrapper from './TimerWrapper';
-import {requests} from '../components/requests';
+import {requests} from './requests';
 
-function SpeakerCard(){
-    const[nextEvent, setNextEvent] = React.useState([]);
+function SpeakerCard({nextEvent}){
+    // const[nextEvent, setNextEvent] = React.useState([]);
     function descriptionShortener(value,n){
         return value?.length > n ? value.substr(0,n-1) + "..." : value;
     }
-    React.useEffect(() => {
-        function GetNextEvent(){
-            const xhr =  new XMLHttpRequest();
-            xhr.open('GET',`${requests.fetchNextEvents}`,true);
-            xhr.responseType = 'json';
-            xhr.addEventListener('load', () => {
-                if(xhr.response.status === 200){
-                    setNextEvent(xhr.response.result);    
-                }
-            });
-            xhr.send();
-        }
-        GetNextEvent();
-    }, [])
+    // React.useEffect(() => {
+    //     function GetNextEvent(){
+    //         const xhr =  new XMLHttpRequest();
+    //         xhr.open('GET',`${requests.fetchNextEvents}`,true);
+    //         xhr.responseType = 'json';
+    //         xhr.addEventListener('load', () => {
+    //             if(xhr.response.status === 200){
+    //                 setNextEvent(xhr.response.result);    
+    //             }
+    //         });
+    //         xhr.send();
+    //     }
+    //     GetNextEvent();
+    // }, [])
 
     return(
         <React.Fragment>
             {nextEvent.length === 0? <CommingSoon/> : 
-            nextEvent.map((event) => 
-                <div className="card" key={event.event_number}>
+            nextEvent.map((event,idx) => 
+                <div className="card" key={idx*35}>
                     <div className="card-p-1">
                         <div className="speaker-profile-wrapper">
                             <div className="avatar-bg">

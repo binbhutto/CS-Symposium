@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import Navbar from '../components/Navbar';
 import '../styles/AddBlog.css';
 import axios from 'axios';
+import {requests} from '../components/requests';
+
 let marked = require("marked");
 
 function AddBlog(){
     const[markdown,setMarkdown] = useState("");
     const[title,setTitle] = useState("");
     const[show,setShow] = useState("none");
-    const[message,setMessage] = useState("");
     const[borderBottom,setBorderBottom] = useState("edit");
 
     function updateMarkdown(markText){
@@ -31,8 +32,8 @@ function AddBlog(){
             "blog_title" : `# ${blog_title}`, 
             "blog_content" : markdown
         }
-        console.log(values);
-        axios.post("http://localhost:5000/blog/add",values)
+
+        axios.post(`${requests.newBlog}`,values)
         .then(response => {
             if(response.data.status == 200){
                 localStorage.removeItem('blog_title');
@@ -61,7 +62,6 @@ function AddBlog(){
 
     return(
         <React.Fragment>
-        <Navbar />
         <section className="relative w-full mx-auto post-wrapper">
             <div className="container px-5 py-24 mx-auto post-inner-wrapper">
                 <div className="flex flex-row items-center w-3/4 mx-auto">

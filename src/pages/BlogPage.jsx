@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import BlogDetailsCard from '../components/BlogDetailsCard';
+import {requests} from '../components/requests';
 
 function BlogPage() {
 
@@ -10,7 +11,7 @@ function BlogPage() {
     let event_num = JSON.parse(localStorage.getItem('blog_number'));
     function GetBlogDetails(e){
       const xhr = new XMLHttpRequest();
-      xhr.open('GET',`http://localhost:5000/blog/${e}`,true);
+      xhr.open('GET',`${requests.fetchBlog}${e}`,true);
       xhr.responseType = 'json';
       xhr.addEventListener('load',() => {
         if(xhr.response.status === 200){

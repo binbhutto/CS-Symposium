@@ -1,8 +1,10 @@
-const BASE_URL = 'http://127.0.0.1:5000/api';
+
+const BASE_URL = "http://localhost:5000/";
 
 export const requests = {
-    fetchNextEvents : `${BASE_URL}/nextevent`,
-    fetchPastEvents : `${BASE_URL}/pastevent`,
-    fetchBlog : `${BASE_URL}/blog`
+    fetchNextEvents : `${BASE_URL}api/nextevent`,
+    fetchPastEvents : `${BASE_URL}api/pastevent`,
+    fetchBlog : `${BASE_URL}blog/`,
+    newBlog : `${BASE_URL}blog/add`,
 }
 
