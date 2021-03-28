@@ -44,7 +44,8 @@ function AddBlog(){
         })
         .catch(error => console.log(error))
     }
-    const SaveDraft = () => {
+    const SaveDraft = (e) => {
+        e.preventDefault();
         localStorage.setItem('blog_title',JSON.stringify(title));
         localStorage.setItem('blog_content',JSON.stringify(markdown));
         window.alert('Draft Saved');

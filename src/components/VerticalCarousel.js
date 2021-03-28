@@ -2,23 +2,17 @@ import React from 'react';
 import '../styles/VerticalCarousel.css';
 import CarouselBtn from '../graphics/past evnts button.png';
 import {requests} from './requests';
+import axios from 'axios';
 import CarouselItem from './CarouselItem';
 
 function VerticalCarousel(){
     const[pastEvent, setPastEvent] = React.useState([]);
     React.useEffect(() => {
-        function GetPastEvent(){
-            const xhr =  new XMLHttpRequest();
-            xhr.open('GET',`${requests.fetchPastEvents}`,true);
-            xhr.responseType = 'json';
-            xhr.addEventListener('load', () => {
-                if(xhr.response.status === 200){
-                    setPastEvent(xhr.response.result);    
-                }
-            });
-            xhr.send();
-        }
-        GetPastEvent();
+        axios.get(`${requests.fetchPastEvents}`)
+        .then(response => {
+            setPastEvent(response.data.result);
+        })
+        .catch(error => console.log(error));
     }, [])
     return(
         <React.Fragment>

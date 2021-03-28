@@ -3,7 +3,6 @@ import logo from './../graphics/cs sym logo.png';
 import './../styles/Landing.css';
 import leftGraphic from './../graphics/left top1.png';
 import rightGraphic from './../graphics/right top.png';
-import {requests} from './requests';
 
 function Landing({regLink}) {
     function RedirectPage(){

@@ -1,5 +1,5 @@
 
-const BASE_URL = "http://localhost:5000/";
+const BASE_URL = process.env.REACT_APP_BASE_URL
 
 export const requests = {
     fetchNextEvents : `${BASE_URL}api/nextevent`,

@@ -1,5 +1,7 @@
 .blog-speaker-content{
-    margin-top: 15rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 20rem;
 }
 .event-header-wrapper{
     width: 100%;
@@ -8,12 +10,15 @@
     justify-content: space-around;
 }
 .blog-event-number{
+    width: 45%;
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
 }
 .blog-event-topic{
+    width: 45%;
     font-size: 25px;
+    text-align: center;
     text-transform: uppercase;
 }
 .card{
@@ -32,17 +37,44 @@
     border-bottom: 1.5px solid #7a7a7a;
 }
 .blog-wrapper{
-    width : 80%;
-    margin: auto;
+    width : 100%;
 }
 .blog-markdown-title{
     width: 80%;
+    margin: auto;
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
 }
-
+.blog-markdown{
+    padding-bottom: 10rem;
+}
+.blog-markdown > h2{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.blog-markdown > ul > li > p{
+    font-size: 1.8rem;
+}
+@media screen and (max-width: 1024px){
+    .blog-speaker-content{
+        width: 100%;
+        margin: auto;
+        margin-top: 15rem;
+    }
+    .blog-markdown{
+        width: 80%;
+        margin: auto;
+    }
+}
 @media screen and (max-width: 440px){
+    .blog-speaker-content{
+        width: 100%;
+        margin: auto;
+        margin-top: 10rem;
+    }
     .comming-soon-wrapper{
-        text-transform: capitalize;
+        text-transform: uppercase;
         font-size: 22px;
     }
     .blog-header{
@@ -61,22 +93,37 @@
         justify-content: space-around;
     }
     .blog-event-number{
+        width: 100%;
         font-size: 25px;
         font-weight: 600;
         text-align: center;
         text-transform: uppercase;
     }
     .blog-event-topic{
+        width: 100%;
         font-size: 22px;
         text-align: center;
         text-transform: uppercase;
     }
-    .blog-wrapper{
-        width : 95%;
-        margin: auto;
-    }
     .blog-markdown-title{
         width: 90%;
+        font-size: 2rem;
+        margin-bottom: 4rem;
         text-align: center;
+    }
+    .card{
+        padding: 0rem;
+    }
+    .blog-markdown{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    .blog-markdown > h2{
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .blog-markdown > ul > li > p{
+        font-size: 1.8rem;
     }
 }

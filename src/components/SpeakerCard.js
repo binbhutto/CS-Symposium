@@ -76,6 +76,7 @@ function SpeakerCard({nextEvent}){
                         <div className="timer">
                             <p className="timer-header">NEXT EVENT COMMING SOON</p>
                             <div className="timer-content">
+                                
                                 <TimerWrapper date={event.event_date} time={event.event_time}/>
                             </div>
                         </div>
