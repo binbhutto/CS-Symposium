@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 
 def create_blueprint(cluster):
 
-    blog = Blueprint("blog",__name__,url_prefix="/blog")
+    blog = Blueprint("blog",__name__,url_prefix="/b")
 
 
     @blog.route("/<event_number>",methods=['GET'])
